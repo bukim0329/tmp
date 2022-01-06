@@ -55,7 +55,16 @@
     이 때 입력한 비밀번호는 화면상에 나타나지 않으니 그냥 입력 후 enter 누르면 됩니다.
     <img width="500px" src="./pic/vmware17.png">
     <hr />
-14. ### 그 후 root인 / 에 디렉토리를 만들 권한이 없으니 sudo 를 이용해 backup 폴더를 만들고 764권한을 주는 명령은 다음과 같습니다.
-    sudo mkdir /backup
+14. ### ~~그 후 root인 / 에 디렉토리를 만들 권한이 없으니 sudo 를 이용해 backup 폴더를 만들고 764권한을 주는 명령은 다음과 같습니다.~~ 
+    ### => scp로 백업파일을 local에서 서버로 보낼 때 권한을 줄 수가 없어서 ~/ 에 backup 디렉토리를 만들었습니다.
+    ~~sudo mkdir /backup~~
 
-    sudo chmod 764 /backup
+    => sudo mkdir ~/backup
+
+    ~~sudo chmod 764 /backup~~
+
+    => sudo chmod 764 ~/backup
+    <hr />
+15. ### script 파일에는 
+    > 스크립트 진행 도중에 .cs 파일이 없는 디렉토리가 있으면, 어느 디렉토리가 없는지 문구를 출력한다.
+    ### 이 조건과 /backup 파일로 보낼 때 권한문제가 있어서 ~/backup 파일로 보내는 쉘 명령어가 포함되어 있다.
